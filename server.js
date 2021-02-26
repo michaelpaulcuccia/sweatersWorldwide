@@ -2,6 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 import connect from './config.js';
 
+import sweaterRoutes from './routes/api/sweaterRoutes.js';
+
 const app = express();
 
 (async () => {
@@ -21,6 +23,12 @@ const app = express();
         process.exit(1);
     }
 })();
+
+//Middleware - get data from req.body in routes
+app.use(express.json({ extended: false }));
+
+//Routes
+app.use('/api/sweaters', sweaterRoutes);
 
 const PORT = 5000;
 
