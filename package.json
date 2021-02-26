@@ -1,0 +1,26 @@
+{
+  "name": "sweatersworldwide",
+  "version": "1.0.0",
+  "description": "Showcase Application for...you guessed it, Sweaters!",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelpaulcuccia/sweatersWorldwide.git"
+  },
+  "author": "Michael-Paul Cuccia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelpaulcuccia/sweatersWorldwide/issues"
+  },
+  "homepage": "https://github.com/michaelpaulcuccia/sweatersWorldwide#readme",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18",
+    "nodemon": "^2.0.7"
+  }
+}
