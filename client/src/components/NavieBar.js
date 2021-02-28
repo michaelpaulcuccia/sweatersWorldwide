@@ -1,11 +1,14 @@
 import React from 'react';
+import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 
 const NavieBar = () => {
 
     return (
         <Navbar variant='dark' bg="dark" expand="lg">
-            <Navbar.Brand href="#home">Sweaters Worldwide</Navbar.Brand>
+            <LinkContainer to="/">
+                <Navbar.Brand >Sweaters Worldwide</Navbar.Brand>
+            </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

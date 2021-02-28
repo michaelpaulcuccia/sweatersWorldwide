@@ -1,0 +1,98 @@
+[
+  {
+    "title": "White and Black",
+    "description": "blah-blah-blah",
+    "fit": "fitted",
+    "season": "fall",
+    "fabric": "cotton-blend",
+    "quantityInStock": 100,
+    "purchasePrice": 50,
+    "retailPrice": 125,
+    "currentlyListed": true,
+    "image": "/images/whiteAndBlack.PNG"
+  },
+  {
+    "title": "Red White and Blue",
+    "description": "blah-blah-blah",
+    "fit": "loose",
+    "season": "fall",
+    "fabric": "cotton-blend",
+    "quantityInStock": 100,
+    "purchasePrice": 50,
+    "retailPrice": 125,
+    "currentlyListed": true,
+    "image": "/images/redWhiteBlue.PNG"
+  },
+  {
+    "title": "Black and White",
+    "description": "blah-blah-blah",
+    "fit": "fitted",
+    "season": "fall",
+    "fabric": "cotton-blend",
+    "quantityInStock": 100,
+    "purchasePrice": 50,
+    "retailPrice": 125,
+    "currentlyListed": true,
+    "image": "/images/blackAndWhite.PNG"
+  },
+  {
+    "title": "This One",
+    "description": "blah-blah-blah",
+    "fit": "loose",
+    "season": "fall",
+    "fabric": "cotton-blend",
+    "quantityInStock": 100,
+    "purchasePrice": 50,
+    "retailPrice": 125,
+    "currentlyListed": true,
+    "image": "/images/aaa.PNG"
+  },
+  {
+    "title": "Stripeys",
+    "description": "blah-blah-blah",
+    "fit": "fitted",
+    "season": "fall",
+    "fabric": "cotton-blend",
+    "quantityInStock": 100,
+    "purchasePrice": 50,
+    "retailPrice": 125,
+    "currentlyListed": true,
+    "image": "/images/bbb.PNG"
+  },
+  {
+    "title": "Boxy Stripes",
+    "description": "blah-blah-blah",
+    "fit": "regular",
+    "season": "winter",
+    "fabric": "cotton-blend",
+    "quantityInStock": 100,
+    "purchasePrice": 50,
+    "retailPrice": 125,
+    "currentlyListed": true,
+    "image": "/images/ccc.PNG"
+  },
+  {
+    "title": "Dark",
+    "description": "blah-blah-blah",
+    "fit": "loose",
+    "season": "fall",
+    "fabric": "cotton-blend",
+    "quantityInStock": 100,
+    "purchasePrice": 50,
+    "retailPrice": 125,
+    "currentlyListed": true,
+    "image": "/images/ddd.PNG"
+  },
+  {
+    "title": "Cool Stropes",
+    "description": "blah-blah-blah",
+    "fit": "regular",
+    "season": "winter",
+    "fabric": "cotton-blend",
+    "quantityInStock": 100,
+    "purchasePrice": 50,
+    "retailPrice": 125,
+    "currentlyListed": true,
+    "image": "/images/eee.PNG"
+  }
+]

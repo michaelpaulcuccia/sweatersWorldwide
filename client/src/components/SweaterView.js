@@ -1,18 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Row, Col, Card, ListGroup } from 'react-bootstrap';
 
 const SweaterView = ({ match }) => {
 
-    console.log(match.params);
+    const [data, setData] = useState({});
 
-    /*
-    - getting item._id from 'match.params'
-    - TO DO: create a card with item's details
-    */
+    const item = match.params;
+    const { id } = item;
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const sweater = await axios.get(`/api/sweaters/${id}`);
+            setData(sweater.data)
+        }
+        fetchData()
+    }, [])
+
+    console.log(data)
 
     return (
-        <div>
-
-        </div>
+        <>
+            <Row>
+                <Col>
+                    <Card
+                        style={{
+                            maxHeight: "720px",
+                            maxWidth: "576px",
+                        }}>
+                        <Card.Img src={data.image} />
+                    </Card>
+                </Col>
+                <Col>
+                    <ListGroup>
+                        <ListGroup.Item>{data.description}</ListGroup.Item>
+                        <ListGroup.Item>Made from: {data.fabric}</ListGroup.Item>
+                        <ListGroup.Item>Fit: {data.fit}</ListGroup.Item>
+                        <ListGroup.Item>Retail Price: ${data.retailPrice}</ListGroup.Item>
+                    </ListGroup>
+                </Col>
+            </Row>
+        </>
     )
 }
 
