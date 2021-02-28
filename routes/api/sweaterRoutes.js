@@ -14,8 +14,28 @@ const getAllSweaters = expressAsyncHandler(async (req, res) => {
 })
 router.route('/').get(getAllSweaters);
 
-//GET sweater, by ID
-//ROUTE: /api/sweaters/:id
+//GET sweater, by fit
+//ROUTE: /api/sweaters/fit
+const getSweatersByFit = expressAsyncHandler(async (req, res) => {
+
+    //get fit type - loose, fitted, regular
+    const { type } = req.body;
+    console.log(type)
+
+    //empty object provides all
+    const sweaters = await Sweater.find({});
+
+    //search array of object for value 
+    const matches = sweaters.filter(sweater => sweater.fit === type);
+    console.log(matches)
+
+    res.json(matches)
+
+})
+router.route('/fit').get(getSweatersByFit);
+
+// GET sweater, by ID
+// ROUTE: /api/sweaters/:id
 const getSweaterById = expressAsyncHandler(async (req, res) => {
 
     const sweater = await Sweater.findById(req.params.id);
@@ -30,5 +50,6 @@ const getSweaterById = expressAsyncHandler(async (req, res) => {
 
 })
 router.route('/:id').get(getSweaterById);
+
 
 export default router;
