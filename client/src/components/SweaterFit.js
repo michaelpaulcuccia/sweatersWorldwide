@@ -15,19 +15,17 @@ const SweaterFit = () => {
                 break;
             case "fitted":
                 let fitted = await axios.get('/api/sweaters/fit/fitted');
-                getSweaters(fitted)
+                getSweaters(fitted.data)
                 break;
             case "regular":
                 let regular = await axios.get('/api/sweaters/fit/regular');
-                getSweaters(regular)
+                getSweaters(regular.data)
                 break;
             default:
             //do nothing
         }
     }
 
-    console.log(sweaters)
-    console.log(sweaters.length)
 
     return (
 
@@ -69,7 +67,23 @@ const SweaterFit = () => {
                 sweaters.map(sweater => (
                     <Row>
                         <Col>
-                            {sweater.title}
+                            <Card
+                                style={{
+                                    maxHeight: "360px",
+                                    maxWidth: "288px",
+                                    marginTop: '10px',
+                                    marginBottom: '10px'
+                                }}>
+                                <Card.Img src={sweater.image} />
+                            </Card>
+                        </Col>
+                        <Col>
+                            <ListGroup>
+                                <ListGroup.Item>{sweater.description}</ListGroup.Item>
+                                <ListGroup.Item>Made from: {sweater.fabric}</ListGroup.Item>
+                                <ListGroup.Item>Fit: {sweater.fit}</ListGroup.Item>
+                                <ListGroup.Item>Retail Price: ${sweater.retailPrice}</ListGroup.Item>
+                            </ListGroup>
                         </Col>
                     </Row>
 
