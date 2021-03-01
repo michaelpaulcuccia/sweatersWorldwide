@@ -32,9 +32,9 @@ const SweaterFit = () => {
 
             <h1 style={{ marginBottom: '18px' }}>Choose a Fit</h1>
 
-            <Row className="px-3">
+            <Row className="px-3" xs={3}>
 
-                <Col>
+                <Col >
                     <Button
                         variant="outline-primary"
                         value='loose'
