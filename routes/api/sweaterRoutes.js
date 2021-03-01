@@ -25,7 +25,7 @@ const getSweatersByFit = expressAsyncHandler(async (req, res) => {
     //empty object provides all
     const sweaters = await Sweater.find({});
 
-    //search array of object for value 
+    //create an array where fit matches type
     const matches = sweaters.filter(sweater => sweater.fit === type);
     console.log(matches)
 
