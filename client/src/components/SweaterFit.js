@@ -7,8 +7,14 @@ const SweaterFit = () => {
     //get fit type - loose, fitted, regular
     // /api/sweaters/fit
 
-    const onClickHandler = (arg) => {
+    const onClickHandler = async (arg) => {
+
         console.log(arg)
+
+        if (arg === 'loose') {
+            let req = await axios.get('/api/sweaters/fit/loose');
+            console.log(req)
+        }
     }
 
     return (

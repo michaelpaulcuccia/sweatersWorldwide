@@ -15,12 +15,10 @@ const getAllSweaters = expressAsyncHandler(async (req, res) => {
 router.route('/').get(getAllSweaters);
 
 //GET sweater, by fit
-//ROUTE: /api/sweaters/fit
+//ROUTE: /api/sweaters/fit/loose
 const getSweatersByFit = expressAsyncHandler(async (req, res) => {
 
-    //get fit type - loose, fitted, regular
-    const { type } = req.body;
-    console.log(type)
+    const type = 'loose';
 
     //empty object provides all
     const sweaters = await Sweater.find({});
@@ -32,7 +30,7 @@ const getSweatersByFit = expressAsyncHandler(async (req, res) => {
     res.json(matches)
 
 })
-router.route('/fit').get(getSweatersByFit);
+router.route('/fit/loose').get(getSweatersByFit);
 
 // GET sweater, by ID
 // ROUTE: /api/sweaters/:id
