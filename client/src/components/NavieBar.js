@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 const NavieBar = () => {
 
@@ -12,19 +12,12 @@ const NavieBar = () => {
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
+                <Nav className="ml-auto">
                     <NavDropdown title="Choose Styles" id="basic-nav-dropdown">
                         <NavDropdown.Item as={Link} to='/sweaterfit'>By Fit</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.2">Style-2</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Style-3</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">Custom Styles</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to='/sweaterseason'>By Season</NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-success">Search</Button>
-                </Form>
             </Navbar.Collapse>
         </Navbar>
     )

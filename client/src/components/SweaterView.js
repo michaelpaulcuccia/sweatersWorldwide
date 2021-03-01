@@ -17,8 +17,6 @@ const SweaterView = ({ match }) => {
         fetchData()
     }, [])
 
-    console.log(data)
-
     return (
         <>
             <Row>

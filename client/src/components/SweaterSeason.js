@@ -2,24 +2,20 @@ import React, { useState } from 'react';
 import { Row, Col, Card, Button, ListGroup } from 'react-bootstrap';
 import axios from 'axios';
 
-const SweaterFit = () => {
+const SweaterSeason = () => {
 
     const [sweaters, getSweaters] = useState([]);
 
     const onClickHandler = async (arg) => {
 
         switch (arg) {
-            case "loose":
-                let loose = await axios.get('/api/sweaters/fit/loose');
-                getSweaters(loose.data)
+            case "winter":
+                let winter = await axios.get('/api/sweaters/season/winter');
+                getSweaters(winter.data)
                 break;
-            case "fitted":
-                let fitted = await axios.get('/api/sweaters/fit/fitted');
-                getSweaters(fitted.data)
-                break;
-            case "regular":
-                let regular = await axios.get('/api/sweaters/fit/regular');
-                getSweaters(regular.data)
+            case "fall":
+                let fall = await axios.get('/api/sweaters/season/fall');
+                getSweaters(fall.data)
                 break;
             default:
             //do nothing
@@ -27,36 +23,28 @@ const SweaterFit = () => {
     }
 
     return (
-
         <>
 
-            <h1 style={{ marginBottom: '18px' }}>Choose a Fit</h1>
+            <h1 style={{ marginBottom: '18px' }}>Choose a Season</h1>
 
             <Row className="px-3">
 
                 <Col>
                     <Button
                         variant="outline-primary"
-                        value='loose'
-                        onClick={() => onClickHandler('loose')}
-                    >Loose</Button>
+                        value='winter'
+                        onClick={() => onClickHandler('winter')}
+                    >Winter</Button>
                 </Col>
 
                 <Col>
                     <Button
                         variant="outline-primary"
-                        value='fitted'
-                        onClick={() => onClickHandler('fitted')}
-                    >Fitted</Button>
+                        value='fall'
+                        onClick={() => onClickHandler('fall')}
+                    >Fall</Button>
                 </Col>
 
-                <Col>
-                    <Button
-                        variant="outline-primary"
-                        value='regular'
-                        onClick={() => onClickHandler('regular')}
-                    >Regular</Button>
-                </Col>
             </Row>
 
             <br></br>
@@ -65,8 +53,9 @@ const SweaterFit = () => {
 
                 sweaters.map(sweater => (
                     <Row key={sweater._id}>
-                        <Col>
+                        <Col >
                             <Card
+
                                 style={{
                                     maxHeight: "360px",
                                     maxWidth: "288px",
@@ -94,7 +83,8 @@ const SweaterFit = () => {
             }
 
         </>
+
     )
 }
 
-export default SweaterFit
+export default SweaterSeason

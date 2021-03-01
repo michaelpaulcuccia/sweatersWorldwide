@@ -1,7 +1,7 @@
 [
   {
     "title": "White and Black",
-    "description": "blah-blah-blah",
+    "description": "Horizontal stripes throughout",
     "fit": "fitted",
     "season": "fall",
     "fabric": "cotton-blend",
@@ -13,9 +13,9 @@
   },
   {
     "title": "Red White and Blue",
-    "description": "blah-blah-blah",
+    "description": "Knitted with red horizontal striped sleeves",
     "fit": "loose",
-    "season": "fall",
+    "season": "winter",
     "fabric": "cotton-blend",
     "quantityInStock": 100,
     "purchasePrice": 50,
@@ -25,7 +25,7 @@
   },
   {
     "title": "Black and White",
-    "description": "blah-blah-blah",
+    "description": "Solid black torso with horizontal striped sleeves.",
     "fit": "fitted",
     "season": "fall",
     "fabric": "cotton-blend",
@@ -36,8 +36,8 @@
     "image": "/images/blackAndWhite.PNG"
   },
   {
-    "title": "This One",
-    "description": "blah-blah-blah",
+    "title": "Vert",
+    "description": "Vertical ribs",
     "fit": "loose",
     "season": "fall",
     "fabric": "cotton-blend",
@@ -49,7 +49,7 @@
   },
   {
     "title": "Stripeys",
-    "description": "blah-blah-blah",
+    "description": "Alternating green, white, and red stripe pattern",
     "fit": "fitted",
     "season": "fall",
     "fabric": "cotton-blend",
@@ -61,7 +61,7 @@
   },
   {
     "title": "Boxy Stripes",
-    "description": "blah-blah-blah",
+    "description": "Bright horizontal stripes across torso and sleeves.",
     "fit": "regular",
     "season": "winter",
     "fabric": "cotton-blend",
@@ -72,8 +72,8 @@
     "image": "/images/ccc.PNG"
   },
   {
-    "title": "Dark",
-    "description": "blah-blah-blah",
+    "title": "Dark Wreath",
+    "description": "Knitted with wreath feature across lower torso and sleeve",
     "fit": "loose",
     "season": "fall",
     "fabric": "cotton-blend",
@@ -84,8 +84,8 @@
     "image": "/images/ddd.PNG"
   },
   {
-    "title": "Cool Stropes",
-    "description": "blah-blah-blah",
+    "title": "Cool Stripes",
+    "description": "Knitted white and gray",
     "fit": "regular",
     "season": "winter",
     "fabric": "cotton-blend",

@@ -5,6 +5,8 @@ import NavieBar from './components/NavieBar';
 import SweaterCard from './components/SweaterCard';
 import SweaterView from './components/SweaterView';
 import SweaterFit from './components/SweaterFit';
+import SweaterSeason from './components/SweaterSeason';
+import Footer from './components/Footer';
 
 const App = () => {
 
@@ -18,6 +20,8 @@ const App = () => {
         </Row>
         <Route path='/sweaterview/:id?' component={SweaterView} />
         <Route path='/sweaterfit' component={SweaterFit} />
+        <Route path='/sweaterseason' component={SweaterSeason} />
+        <Footer />
       </Container>
     </Router>
   )
