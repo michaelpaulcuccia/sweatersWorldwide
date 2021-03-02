@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import connect from './config.js';
+//import connect from './config.js';
 import path from 'path';
 
 import sweaterRoutes from './routes/api/sweaterRoutes.js';
@@ -9,7 +9,7 @@ const app = express();
 
 (async () => {
     try {
-        const conn = await mongoose.connect(connect.MONGO_URI, {
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true,
