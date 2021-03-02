@@ -2,10 +2,8 @@ import express from 'express';
 import mongoose from 'mongoose';
 //import connect from './config.js';
 import path from 'path';
-
+import morgan from 'morgan';
 import sweaterRoutes from './routes/api/sweaterRoutes.js';
-
-const app = express();
 
 (async () => {
     try {
@@ -24,6 +22,12 @@ const app = express();
         process.exit(1);
     }
 })();
+
+const app = express();
+
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev'))
+}
 
 //Middleware - get data from req.body in routes
 app.use(express.json({ extended: false }));
@@ -45,7 +49,7 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
     console.log(`App listening on Port: ${PORT}`);
