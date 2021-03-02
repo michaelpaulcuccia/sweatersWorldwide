@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Row, Col, Card, ListGroup } from 'react-bootstrap';
+import noImage from '../noImage/noImage.PNG';
 
 const SweaterView = ({ match }) => {
 
@@ -26,7 +27,7 @@ const SweaterView = ({ match }) => {
                             maxHeight: "720px",
                             maxWidth: "576px",
                         }}>
-                        <Card.Img src={data.image} />
+                        <Card.Img src={data.image && data.image !== null ? data.image : noImage} />
                     </Card>
                 </Col>
                 <Col>

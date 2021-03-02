@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import connect from './config.js';
+import path from 'path';
 
 import sweaterRoutes from './routes/api/sweaterRoutes.js';
 
@@ -29,6 +30,20 @@ app.use(express.json({ extended: false }));
 
 //Routes
 app.use('/api/sweaters', sweaterRoutes);
+
+//deployment
+const __dirname = path.resolve();
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '/client/build')))
+
+    app.get('*', (req, res) =>
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
+    )
+} else {
+    app.get('/', (req, res) => {
+        res.send('API is running....')
+    })
+}
 
 const PORT = 5000;
 

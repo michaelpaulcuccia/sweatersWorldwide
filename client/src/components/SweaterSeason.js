@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col, Card, Button, ListGroup } from 'react-bootstrap';
 import axios from 'axios';
+import noImage from '../noImage/noImage.PNG';
 
 const SweaterSeason = () => {
 
@@ -62,7 +63,7 @@ const SweaterSeason = () => {
                                     marginTop: '10px',
                                     marginBottom: '10px'
                                 }}>
-                                <Card.Img src={sweater.image} />
+                                <Card.Img src={sweater.image && sweater.image !== null ? sweater.image : noImage} />
                             </Card>
                         </Col>
                         <Col>
